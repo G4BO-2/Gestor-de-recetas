@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Recetas</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📘 Gestor de Recetas</h1>
+            <p>Agrega, visualiza y organiza tus recetas favoritas</p>
+        </header>
+
+        <section class="form-section">
+            <form id="formulario-receta" class="form">
+                <div class="form-group">
+                    <label for="nombre">Nombre de la receta</label>
+                    <input type="text" id="nombre" placeholder="Ej: Ensalada César" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="ingredientes">Ingredientes (separados por coma)</label>
+                    <textarea id="ingredientes" rows="3" placeholder="Ej: lechuga, pollo, queso, aderezo"
+                        required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="tiempo">Tiempo de preparación (minutos)</label>
+                    <input type="number" id="tiempo" min="1" placeholder="Ej: 15" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="dificultad">Dificultad</label>
+                    <select id="dificultad" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="fácil">Fácil</option>
+                        <option value="media">Media</option>
+                        <option value="difícil">Difícil</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Agregar Receta</button>
+            </form>
+        </section>
+
+        <hr />
+
+        <section class="list-section">
+            <h2>🍲 Recetas guardadas</h2>
+            <div id="lista-recetas" class="recetas-container">
+                <!-- Aquí se mostrarán las recetas -->
+            </div>
+        </section>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
